@@ -14,8 +14,11 @@ The notebook is designed to run in a Google Colab environment, it ran on A100.
 * Transformers
 * scikit-learn
 * pandas
+* numpy
 * bitsandbytes
 * huggingface_hub
+* torch
+* accelerate
 
 # Dataset Information
 The evaluation utilizes a dataset containing cultural questions:
