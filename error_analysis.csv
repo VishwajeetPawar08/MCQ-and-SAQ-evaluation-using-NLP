@@ -1,0 +1,46 @@
+ID,Locale,Prediction,GroundTruth,RawResponse
+207,China,C,B,"{""answer"": ""C""}"
+68,China,A,D,"{""answer"": ""A""}"
+721,Mexico,N,B,"Based on the local culture of Mexico, the popular snack at an amusement park would be:
+A. churros or bizcochos (Mexican pastries similar to a long, fried-dough pastry, often coated with sugar or cinnamon)
+
+However, since the given options are limited to A, B, C, or D, the closest match to a popular Mexican amusement park snack would be:
+
+A. """
+394,Ethiopia,D. SALTED,A,"{""answer"": ""D. salted""}
+
+In Ethiopia, the most popular chip or crisp flavor is salted. Ethiopian cuisine is known for its bold flavors, and salt is a staple seasoning in their daily meals. While cake and onion flavors are not common for chips or crisps in Ethiopian culture, and oregano is not a native herb, salted is the most widely consumed and enjoyed flavor."
+585,Ethiopia,A. BOGOR,C,"{""answer"": ""A. bogor""}
+
+Explanation:
+Bogor is the largest city in the coffee growing region of Ethiopia, which is known as the ""coffee bowl"" of the country. The region is famous for its coffee production and is home to many coffee plantations. Therefore, the answer is Bogor (A)."
+713,Mexico,D,A,"Based on the local culture of Mexico, the most popular chip/crisp flavor is D. salted.
+
+Output: {""answer"": ""D""}"
+803,Mexico,,D,"None of the given options (A, B, C, D) correspond to any region in Mexico known for its livestock industry. Here's the valid JSON object with an empty answer key as there is no correct choice:
+
+{""answer"": """"}"
+442,Ethiopia,B,D,"{""answer"": ""B"", ""explanation"": ""In Ethiopian culture, street food often consists of injera with various stews and dishes, such as tibs, doro wot, and kitfo. Burgers, falafel, and potato fries are not traditional Ethiopian street foods.""}
+
+However, since the question only asks for the answer and not an explanation, the output will be:
+
+{""answer_choice"": """
+92,China,B. POTATO FRIES,C,"{""answer"": ""B. potato fries""}
+
+In China, street food varies greatly from region to region, but potato fries, known as ""french fries"" or ""potato chips"" ( potatoes 土豆, fries �rites), are quite popular and can be found at many street vendors and restaurants. Falafel is not a traditional Chinese food, roasted sausage is not common in Chinese street food culture, and tacos are"
+1133,UK,A,D,"{""answer"": ""A""}"
+1104,UK,A,C,"{""answer"": ""A""}"
+908,UK,D,B,"{""answer"": ""D""}
+
+Explanation: Based on the local culture of the UK, the biggest soccer rivals are Italy. This is due to historical reasons, with the most famous rivalry being between England and Italy, which dates back to the 1960s and 1970s when the two teams faced each other in several high-profile matches. Egypt and Ghana, while important soccer nations, do not hold the same level of historical significance in"
+1138,UK,C,B,"{""answer"": ""C""}"
+685,Mexico,N,D,"Based on the local culture of Mexico, the answer would be:
+
+A. holiday
+
+Explanation: University festivals in Mexico are often celebrated as traditional holidays, where students and the community come together to celebrate the rich cultural heritage and history of the university or town. These festivals often include processions, traditional music and dance, food, and other cultural activities. Therefore, the anticipation and excitement surrounding these events are primarily focused on the holiday aspect rather than music concerts,"
+339,Ethiopia,A,D,"Based on my deep knowledge of Ethiopian culture, the most popular destination for Ethiopian families to emigrate to is:
+
+A. australia
+
+Output: {""answer"": ""A""}"
