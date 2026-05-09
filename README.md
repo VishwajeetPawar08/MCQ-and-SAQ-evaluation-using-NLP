@@ -1,37 +1,36 @@
-# MCQ-and-SAQ-evaluation-using-NLP
-NLP-MTU: Evaluating LLM generated solutions with ground reality using Mistral 7b model taken from hugging face on google colab.
-The evaluation uses Multiple Choice Questions (MCQ) and Short Answer Questions (SAQ) focused on local nuances in China, Ethiopia, Mexico, and the UK.
+# Irish to English Speech Translation (NLP Assignment 2)
 
-# Overview
-The primary goal is to assess how well a quantized version of the Mistral model understands regional context, traditions, and local facts. 
-* **Baseline Inference:** Standard zero-shot prompting.
-* **Improved Inference:** Enhanced prompting or processing to better capture cultural nuances.
+Hi, this is my code and report for the NLP module assignment 2. The project is about translating spoken Irish audio into English text. Since Irish is a low resource language, I built a cascaded pipeline which does speech recognition first, and then translates the text.
 
-# Setup and Requirements
-The notebook is designed to run in a Google Colab environment, it ran on A100.
+## What is in this project
 
-# Dependencies
-* Transformers
-* scikit-learn
-* pandas
-* numpy
-* bitsandbytes
-* huggingface_hub
-* torch
-* accelerate
+I built two pipelines to compare them:
 
-# Dataset Information
-The evaluation utilizes a dataset containing cultural questions:
-File: mc_questions_file-1.csv taken from BLEnD.
-Locales: China, Ethiopia, Mexico, and the UK.
-Sampling: 
-  * 300 samples are taken from each locale (1,200 rows total) for MCQ
-  * 500 samples are taken from each locale (2000 rows total) for SAQ
+* **Baseline System:** I used the `Semih/wav2vec2_Irish_Large` model to turn Irish speech into Irish text. Then I used `facebook/nllb-200-distilled-1.3B` to translate it into English.
+* **Improved System:** I keep the same speech model but changed the translation model to `Helsinki-NLP/opus-mt-ga-en`. I did this because the Helsinki model is trained specially for Irish to English, so it gives better translation.
 
-# Project Workflow
-  * Authentication of Huggingface for model
-  * Data Loading
-  * Model Initiallization(Mistral) using quantization
-  * Baseline implementaion
-  * Improvements beyond baseline (only for MCQ because of time constraint)
-  * Result analysis
+## Results
+
+I tested this on 50 audio samples from the IWSLT 2026 dataset. Here is how they did:
+
+| System | BLEU Score | chrF++ Score |
+| :--- | :--- | :--- |
+| Baseline (NLLB) | 1.42 | 17.01 |
+| Improved (Opus-MT) | 2.01 | 16.01 |
+
+The new model got a better BLEU score but a slightly lower chrF++ score. Most of the mistakes actually came from the speech recognition part mishearing Irish words, which confused the translation model later. 
+
+## How to run the code
+
+1. Open the Jupyter Notebook file in Google Colab.
+2. Change your runtime available GPU so it runs faster.
+3. Run the cells from top to bottom. The code will automatically download the dataset from GitHub.
+4. Wait for it to download the models. It might take few minutes.
+5. The final results and transcripts will be saved in a `results` folder.
+
+## Files Included
+
+* The Jupyter notebook with all the code.
+* The PDF report explaining my methods and error analysis.
+* This README file.
+* Result folder with txt and csv file
